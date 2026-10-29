@@ -7,7 +7,7 @@ const M=[
 {id:'nacional',n:'Museo Nacional de Colombia',la:4.6155,lo:-74.0678,a:'Cra. 7 #28-66',c:'#7fb3d5',t:'Fundado en 1823, el museo más antiguo del país.'},
 {id:'mambo',n:'Museo de Arte Moderno de Bogotá',la:4.6124,lo:-74.0683,a:'Calle 24 #6-00',c:'#e0838f',t:'Arte moderno y contemporáneo en un edificio de ladrillo.'},
 {id:'quinta',n:'Quinta de Bolívar',la:4.6024,lo:-74.0641,a:'Calle 20 #2-91 Este',c:'#8fbf7a',t:'La casa que Bogotá regaló a Simón Bolívar en 1820.'},
-{id:'moneda',n:'Museo Casa de Moneda',la:4.5965,lo:-74.0729,a:'Calle 11 #4-93',c:'#c0c4cc',t:'Historia del dinero y de la acuñación de monedas en Colombia.'},
+{id:'moneda',n:'Museo Casa de Moneda',la:4.5965,lo:-74.0729,a:'Calle 11 #4-93',c:'#e9ff6d',t:'Historia del dinero y de la acuñación de monedas en Colombia.'},
 {id:'maloka',n:'Maloka',la:4.6527,lo:-74.0933,a:'Cra. 68D #24A-51',c:'#6cc3c0',t:'Centro interactivo de ciencia y tecnología.'}
 ];
 /* ENLACES: cada grupo pega aquí la URL de su museo (https://...). Si queda vacío, el mapa avisa que falta. */
