@@ -12,7 +12,7 @@ const M=[
 ];
 /* ENLACES: cada grupo pega aquí la URL de su museo (https://...). Si queda vacío, el mapa avisa que falta. */
 const L={oro:'',botero:'',florero:'',nacional:'https://sergioandresruizf-source.github.io/museo_Nacional_Colombia/',mambo:'',quinta:'',moneda:'',maloka:''};
-const go=i=>{const u=L[M[i].id],s=document.getElementById('st');if(u){s.textContent='';window.open(u,'_blank','noopener')}else s.textContent=M[i].n.split(' – ')[0]+': su grupo aún no ha agregado el enlace.'};
+const go=i=>{const u=L[M[i].id],s=document.getElementById('st');if(u){s.textContent='';   location.href=u}else s.textContent=M[i].n.split(' – ')[0]+': su grupo aún no ha agregado el enlace.'};
 const P=(a,o)=>[322+(o+74.055)*1630,45+(4.82-a)*1630];
 const app=document.getElementById('app');let svg,vb,raf;
 function home(){
@@ -21,7 +21,7 @@ function home(){
  <image href="mapa.jpg" x="0" y="0" width="468" height="656" preserveAspectRatio="none"/>
  ${M.map((m,i)=>{const p=P(m.la,m.lo);return `<g class="mk" data-i="${i}" data-x="${p[0].toFixed(2)}" data-y="${p[1].toFixed(2)}" tabindex="0" role="link" aria-label="${m.n}"><circle class="hit" r="15"/><circle class="d" r="7" fill="${m.c}"/><text class="l" x="11" y="4">${m.n.split(' – ')[0]}</text></g>`}).join('')}
  </svg><div id="tip" role="tooltip"></div><div class="zb"><button aria-label="Acercar" id="zi">+</button><button aria-label="Alejar" id="zo">−</button><button aria-label="Ver toda la ciudad" id="zr">⌂</button></div></div>
- <ul class="li">${M.map((m,i)=>`<li><button data-f="${i}">${m.n.split(' – ')[0]}<small>${m.a}</small></button><a href="${L[m.id]||'#'}" target="_blank" rel="noopener" data-g="${i}">Visitar</a></li>`).join('')}</ul></div>`;
+ <ul class="li">${M.map((m,i)=>`<li><button data-f="${i}">${m.n.split(' – ')[0]}<small>${m.a}</small></button><a href="${L[m.id]||'#'}" data-g="${i}">Visitar</a></li>`).join('')}</ul></div>`;
  svg=document.getElementById('m');vb=[0,0,468,656];
  const W0=document.querySelector('.mapw');let dr=null,moved=false;
  const pt=(x,y)=>{const q=svg.createSVGPoint();q.x=x;q.y=y;return q.matrixTransform(svg.getScreenCTM().inverse())};
