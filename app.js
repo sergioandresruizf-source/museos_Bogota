@@ -1,18 +1,19 @@
+// Datos de cada museo: id, nombre, coordenadas (la, lo), dirección (a), color (c) y frase del recuadro (t).
+// El contenido de cada museo (obras, historia) va en la página de su grupo, no aquí.
 const M=[
-{id:'oro',n:'Museo del Oro',la:4.6019,lo:-74.0720,a:'Cra. 6 #15-88',c:'#e8b64c',t:'Más de 30.000 piezas de orfebrería prehispánica.',i:[['🏺','Poporo quimbaya','Recipiente de oro para guardar cal, usado junto a la hoja de coca en rituales.'],['🛶','Balsa muisca','Evoca la ceremonia de la laguna de Guatavita, origen del mito de El Dorado.'],['👑','Orfebrería tairona','Pectorales y colgantes de la Sierra Nevada de Santa Marta.'],['⚱️','Cerámica y textiles','Objetos de culturas prehispánicas que acompañan la colección de oro.']]},
-{id:'botero',n:'Museo Botero',la:4.5968,lo:-74.0735,a:'Calle 11 #4-41',c:'#d9693f',t:'La donación de Fernando Botero, en una casa colonial restaurada.',i:[['🎨','Mona Lisa a los doce años','La versión de Botero del famoso retrato, con sus formas voluminosas.'],['🗿','Esculturas','Figuras monumentales en bronce, marca del estilo del artista.'],['🖼️','Colección internacional','Obras de artistas como Picasso, Monet y Dalí, donadas junto a las suyas.'],['🏡','La casa','Un edificio colonial con patio central, hoy sala de exposición.']]},
-{id:'florero',n:'Museo de la Independencia – Casa del Florero',la:4.5977,lo:-74.0757,a:'Calle 11 #6-94',c:'#c9573f',t:'Donde se cuenta lo ocurrido el 20 de julio de 1810.',i:[['🏺','El florero','El incidente con un florero prestado encendió la revuelta de 1810.'],['📜','Documentos','Papeles y relatos del proceso de independencia.'],['🔔','Plaza de Bolívar','El museo queda frente a la plaza donde se dieron los hechos.'],['🏛️','Casa colonial','Un edificio de la época, junto al centro político de la ciudad.']]},
-{id:'nacional',n:'Museo Nacional de Colombia',la:4.6155,lo:-74.0678,a:'Cra. 7 #28-66',c:'#7fb3d5',t:'Fundado en 1823, el museo más antiguo del país.',i:[['🏛️','Antiguo Panóptico','El edificio fue una cárcel diseñada por Thomas Reed e inaugurada en 1874.'],['🗿','Arqueología','Piezas de las culturas que habitaron el territorio antes de la Colonia.'],['🖼️','Arte','Pintura y escultura desde la época colonial hasta hoy.'],['📜','Historia','Objetos que cuentan la formación de la nación.']]},
-{id:'mambo',n:'Museo de Arte Moderno de Bogotá',la:4.6124,lo:-74.0683,a:'Calle 24 #6-00',c:'#e0838f',t:'Arte moderno y contemporáneo en un edificio de ladrillo.',i:[['🧱','Edificio de Salmona','Diseño en ladrillo de Rogelio Salmona, inaugurado en 1979.'],['🎨','Pintura','Obras de artistas colombianos e internacionales del siglo XX.'],['🗽','Escultura','Piezas que exploran la forma y el espacio.'],['📷','Fotografía y nuevos medios','Exposiciones temporales de arte contemporáneo.']]},
-{id:'quinta',n:'Quinta de Bolívar',la:4.6024,lo:-74.0641,a:'Calle 20 #2-91 Este',c:'#8fbf7a',t:'La casa que Bogotá regaló a Simón Bolívar en 1820.',i:[['🏡','La casa','Residencia campestre al pie de los cerros orientales.'],['🌳','Jardines','Senderos y jardines que rodean la casa.'],['🛏️','Alcoba','Ambientes que recrean la vida cotidiana del Libertador.'],['🗡️','Objetos','Muebles y piezas de la época de Bolívar.']]},
-{id:'moneda',n:'Museo Casa de Moneda',la:4.5965,lo:-74.0729,a:'Calle 11 #4-93',c:'#c0c4cc',t:'Historia del dinero y de la acuñación de monedas en Colombia.',i:[['🪙','Numismática','Monedas colombianas de distintas épocas.'],['💵','Billetes','Papel moneda y su evolución.'],['⚙️','Acuñación','Cómo se fabricaban las monedas.'],['🏛️','La casa','Edificio colonial donde funcionó la Casa de Moneda.']]},
-{id:'maloka',n:'Maloka',la:4.6527,lo:-74.0933,a:'Cra. 68D #24A-51',c:'#6cc3c0',t:'Centro interactivo de ciencia y tecnología.',i:[['🔬','Experimentos','Módulos para probar fenómenos de física y biología con las manos.'],['🌌','Domo digital','Sala de proyección inmersiva sobre el universo.'],['🧬','Vida','Espacios dedicados a la biodiversidad y el cuerpo humano.'],['🚀','Tecnología','Exhibiciones sobre ingeniería e innovación.']]}
+{id:'oro',n:'Museo del Oro',la:4.6019,lo:-74.0720,a:'Cra. 6 #15-88',c:'#e8b64c',t:'Más de 30.000 piezas de orfebrería prehispánica.'},
+{id:'botero',n:'Museo Botero',la:4.5968,lo:-74.0735,a:'Calle 11 #4-41',c:'#d9693f',t:'La donación de Fernando Botero, en una casa colonial restaurada.'},
+{id:'florero',n:'Museo de la Independencia – Casa del Florero',la:4.5977,lo:-74.0757,a:'Calle 11 #6-94',c:'#c9573f',t:'Donde se cuenta lo ocurrido el 20 de julio de 1810.'},
+{id:'nacional',n:'Museo Nacional de Colombia',la:4.6155,lo:-74.0678,a:'Cra. 7 #28-66',c:'#7fb3d5',t:'Fundado en 1823, el museo más antiguo del país.'},
+{id:'mambo',n:'Museo de Arte Moderno de Bogotá',la:4.6124,lo:-74.0683,a:'Calle 24 #6-00',c:'#e0838f',t:'Arte moderno y contemporáneo en un edificio de ladrillo.'},
+{id:'quinta',n:'Quinta de Bolívar',la:4.6024,lo:-74.0641,a:'Calle 20 #2-91 Este',c:'#8fbf7a',t:'La casa que Bogotá regaló a Simón Bolívar en 1820.'},
+{id:'moneda',n:'Museo Casa de Moneda',la:4.5965,lo:-74.0729,a:'Calle 11 #4-93',c:'#c0c4cc',t:'Historia del dinero y de la acuñación de monedas en Colombia.'},
+{id:'maloka',n:'Maloka',la:4.6527,lo:-74.0933,a:'Cra. 68D #24A-51',c:'#6cc3c0',t:'Centro interactivo de ciencia y tecnología.'}
 ];
 /* ENLACES: cada grupo pega aquí la URL de su museo (https://...). Si queda vacío, el mapa avisa que falta. */
 const L={oro:'',botero:'',florero:'',nacional:'',mambo:'',quinta:'',moneda:'',maloka:''};
 const go=i=>{const u=L[M[i].id],s=document.getElementById('st');if(u){s.textContent='';window.open(u,'_blank','noopener')}else s.textContent=M[i].n.split(' – ')[0]+': su grupo aún no ha agregado el enlace.'};
 const P=(a,o)=>[322+(o+74.055)*1630,45+(4.82-a)*1630];
-const pts=A=>A.map(p=>P(p[0],p[1]).map(v=>v.toFixed(1)).join(',')).join(' ');
 const app=document.getElementById('app');let svg,vb,raf;
 function home(){
  app.innerHTML=`<div class="top"><h1>Museos de Bogotá</h1><p>Cada museo tiene dos caras: lo que se exhibe hoy y lo que fue retirado por razones sociales, políticas o culturales. Acerca el mapa y toca un museo para entrar a la página de su grupo.</p><p id="st" role="status" style="margin-top:.4rem;min-height:1.5em;color:#e8b64c"></p></div>
@@ -46,13 +47,5 @@ function home(){
 }
 function set(){vb[0]=Math.max(0,Math.min(vb[0],468-vb[2]));vb[1]=Math.max(0,Math.min(vb[1],656-vb[3]));svg.style.touchAction=vb[2]>=467?'pan-y':'none';svg.setAttribute('viewBox',vb.map(v=>v.toFixed(2)).join(' '));const tp=document.getElementById('tip');if(tp)tp.style.display='none';svg.classList.toggle('z',vb[2]<150);const s=vb[2]/468;svg.querySelectorAll('.mk').forEach(g=>g.setAttribute('transform','translate('+g.dataset.x+' '+g.dataset.y+') scale('+s+')'))}
 function fly(t){cancelAnimationFrame(raf);const a=vb.slice();let k=0;(function f(){k+=.08;const u=Math.min(1,k),e=u*(2-u);vb=a.map((v,i)=>v+(t[i]-v)*e);set();if(u<1)raf=requestAnimationFrame(f)})()}
-function room(m,j){
- const p=M[(j+M.length-1)%M.length],n=M[(j+1)%M.length];
- app.innerHTML=`<main class="v" style="--c:${m.c}"><a href="#">← Volver al mapa</a><h1 style="margin-top:1rem">${m.n}</h1><p style="color:var(--mu);margin:0">${m.t} ${m.a}, Bogotá.</p>
- <div class="room"><div class="wall">${m.i.map((o,k)=>`<button class="fr" data-k="${k}" aria-pressed="false"><b>${o[0]}</b><span>${o[1]}</span></button>`).join('')}</div><div class="floor"></div></div>
- <div class="info" id="info" aria-live="polite"><h2>Sala virtual</h2><p>Toca una obra para observarla de cerca.</p></div>
- <div class="nav"><a href="#${p.id}">← ${p.n.split(' – ')[0]}</a><a href="#${n.id}">${n.n.split(' – ')[0]} →</a></div></main>`;
- document.querySelectorAll('.fr').forEach(b=>b.onclick=()=>{const o=m.i[b.dataset.k];document.querySelectorAll('.fr').forEach(x=>x.setAttribute('aria-pressed',x===b));document.getElementById('info').innerHTML=`<h2>${o[1]}</h2><p>${o[2]}</p>`});
-}
-function route(){const h=location.hash.slice(1),j=M.findIndex(m=>m.id===h);window.scrollTo(0,0);home()}
-addEventListener('hashchange',route);route();
+home();
+ 
